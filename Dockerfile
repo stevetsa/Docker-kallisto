@@ -38,3 +38,5 @@ RUN make install
 # Add paths
 ENV PATH $HOME/bin:$PATH
 ENV LD_LIBRARY_PATH $HOME/lib/:$LD_LIBRARY_PATH
+
+RUN apt-get install -y snakemake
