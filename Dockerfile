@@ -9,16 +9,14 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 RUN apt-get update
 
-RUN apt-get install --yes \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes \
  build-essential \
  gcc-multilib \
  apt-utils \
  zlib1g-dev \
  cmake \
- libhdf5-dev
-
-RUN apt-get install -y wget
-RUN apt-get install -y git-all
+ libhdf5-dev \
+ git-all
 
 #RUN echo $HOME  ### /root
 #RUN pwd
@@ -39,4 +37,4 @@ RUN make install
 ENV PATH $HOME/bin:$PATH
 ENV LD_LIBRARY_PATH $HOME/lib/:$LD_LIBRARY_PATH
 
-RUN apt-get install -y snakemake
+#RUN apt-get install -y snakemake
