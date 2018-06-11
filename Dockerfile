@@ -4,7 +4,7 @@
 # Nature Biotechnology 34, 525–527 (2016), doi:10.1038/nbt.3519
 ####
 
-FROM ubuntu:16.04
+FROM ubuntu:17.03
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 RUN apt-get update
@@ -28,7 +28,7 @@ RUN git clone https://github.com/pachterlab/kallisto.git
 WORKDIR kallisto
 RUN mkdir build
 WORKDIR build
-RUN cmake ../
+RUN cmake ..
 RUN make
 RUN make install
 
