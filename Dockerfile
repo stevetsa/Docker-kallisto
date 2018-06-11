@@ -28,7 +28,7 @@ RUN git clone https://github.com/pachterlab/kallisto.git
 WORKDIR kallisto
 RUN mkdir build
 WORKDIR build
-RUN cmake ..
+RUN cmake ../
 RUN make
 RUN make install
 
