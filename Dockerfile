@@ -5,7 +5,7 @@
 ####
 
 FROM ubuntu:17.10
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+#RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 RUN apt-get update
 
